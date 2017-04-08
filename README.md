@@ -25,5 +25,4 @@ To Do list:
 1) Password-less authentication for pushes to the vc server.
 2) Make bootstrapping easier with a bootstrap.sh script to request: a) the location of SSH keys and b) the GitHub remote to use as master repo.  These variables should be used to parameterize the vc context and Dockerfile, rather than continuing with the existing hardcodes.
 3) Investigate further automation of the jenkins launcher.
-4) Publish this project into a public GitHub repo.
-5) Write jenkins_backup.sh script.  This should allow one to restore a lost cicd pipeline onto a new development machine.  It would do this by extracting and storing old jenkins build jobs and plugins.  The script should be bi-directional, both saving and restoring jenkins setups according to the flag used. 
+4) Write jenkins_backup.sh script.  This should allow one to restore a lost cicd pipeline onto a new development machine.  It would do this by extracting and storing old jenkins build jobs and plugins.  The script should be bi-directional, both saving and restoring jenkins setups according to the flag used. 
