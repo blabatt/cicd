@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  # eventually, jenkins should build test server rather
+  # than docker-compose doing so...
+  test:
+    build: ../kpis/.
+    image: kpi 
+    networks:
+      - dev-net
+
+  ci:
+    build: ./ci
+    image: ci
+    networks:
+      - dev-net
+    volumes: 
+      - ./ci/jenkins-data:/var/jenkins_home
+
+  vc: 
+    build: ./vc
+    image: vc
+    networks: 
+      - dev-net
+
+networks:
+  dev-net:
+    driver: bridge
+
